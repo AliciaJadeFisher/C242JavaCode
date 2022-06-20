@@ -1,4 +1,4 @@
-package Engage.Arrays;
+package Practice.Arrays;
 
 import java.util.Random;
 

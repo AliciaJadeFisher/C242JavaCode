@@ -1,4 +1,4 @@
-package Engage.WhilesAndDos;
+package Practice.WhilesAndDos;
 
 public class WaitAWhile
 {

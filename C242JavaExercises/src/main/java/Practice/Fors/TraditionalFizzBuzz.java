@@ -1,4 +1,4 @@
-package Engage.Fors;
+package Practice.Fors;
 
 import java.util.Scanner;
 

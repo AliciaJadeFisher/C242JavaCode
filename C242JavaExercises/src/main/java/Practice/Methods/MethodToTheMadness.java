@@ -1,4 +1,4 @@
-package Engage.Methods;
+package Practice.Methods;
 
 public class MethodToTheMadness
 {

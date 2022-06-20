@@ -1,4 +1,4 @@
-package Engage.IfElse;
+package Practice.IfElse;
 
 import java.util.Scanner;
 

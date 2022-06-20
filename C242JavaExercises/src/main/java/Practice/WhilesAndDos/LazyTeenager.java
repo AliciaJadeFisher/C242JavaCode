@@ -1,4 +1,4 @@
-package Engage.WhilesAndDos;
+package Practice.WhilesAndDos;
 
 import java.util.Random;
 

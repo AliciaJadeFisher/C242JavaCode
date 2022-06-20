@@ -1,4 +1,4 @@
-package Engage.Random;
+package Practice.Random;
 
 import java.util.Random;
 import java.util.Scanner;

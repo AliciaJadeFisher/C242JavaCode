@@ -1,4 +1,4 @@
-package Engage.Scanner;
+package Practice.Scanner;
 
 import java.util.Scanner;
 

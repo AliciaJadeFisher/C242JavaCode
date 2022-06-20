@@ -1,4 +1,4 @@
-package Engage.Arrays;
+package Practice.Arrays;
 
 public class ARainbow
 {
