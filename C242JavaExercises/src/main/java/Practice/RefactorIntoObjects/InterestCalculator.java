@@ -120,17 +120,11 @@ public class InterestCalculator
             earned = total * r;
             double newTotal = total + earned;
 
-            if(period.equals("Q"))
+            switch (period)
             {
-                System.out.println("Quarter " + i + ": ");
-            }
-            else if(period.equals("M"))
-            {
-                System.out.println("Month " + i + ": ");
-            }
-            else if(period.equals("D"))
-            {
-                System.out.println("Day " + i + ": ");
+                case "Q" -> System.out.println("Quarter " + i + ": ");
+                case "M" -> System.out.println("Month " + i + ": ");
+                case "D" -> System.out.println("Day " + i + ": ");
             }
 
             System.out.println("Began with: $" + df.format(total));
