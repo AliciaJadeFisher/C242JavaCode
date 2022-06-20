@@ -13,7 +13,7 @@ public class Square extends Shape
     @Override
     double getArea()
     {
-        return length * 2;
+        return length * length;
     }
 
     @Override
