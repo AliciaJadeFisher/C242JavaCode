@@ -1,4 +1,4 @@
-package Exercises;
+package Exercises.StateCapitals;
 
 import java.io.*;
 import java.util.*;
