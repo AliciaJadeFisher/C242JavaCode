@@ -1,11 +1,11 @@
 package Exercises;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Set;
 
-public class StateCapitals
+public class StateCapitals1
 {
     static HashMap<String,String> capitals = new HashMap<>();
     public static void main(String[] args)
