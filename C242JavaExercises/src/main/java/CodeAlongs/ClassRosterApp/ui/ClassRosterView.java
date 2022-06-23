@@ -78,6 +78,11 @@ public class ClassRosterView {
         io.readString(
                 "Student successfully created.  Please hit enter to continue");
     }
+
+    public void displayRemoveSuccessBanner() {
+        io.readString(
+                "Student successfully removed.  Please hit enter to continue");
+    }
     public void displayDisplayAllBanner() {
         io.print("=== Display All Students ===");
     }
