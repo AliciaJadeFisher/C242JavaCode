@@ -1,12 +1,14 @@
 package Practice.RefactorIntoObjects;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class InterestCalculator
 {
     int timeFrame;
-    double amount,rate;
+    BigDecimal amount,rate;
     String period;
 
     public InterestCalculator() {}
@@ -28,7 +30,7 @@ public class InterestCalculator
         {
             try
             {
-                amount = Double.parseDouble(input.nextLine());
+                amount = new BigDecimal(input.nextLine());
                 break;
             }
             catch(NumberFormatException e)
@@ -58,7 +60,7 @@ public class InterestCalculator
         {
             try
             {
-                rate = Double.parseDouble(input.nextLine());
+                rate = new BigDecimal(input.nextLine());
                 break;
             }
             catch(NumberFormatException e)
@@ -93,32 +95,35 @@ public class InterestCalculator
     public void getInvestment()
     {
         final DecimalFormat df = new DecimalFormat("0.00");
-        double total = amount;
-        double earned;
-        double r = rate /100;
+        BigDecimal total = amount;
+        BigDecimal earned;
+        BigDecimal r = rate.divide(BigDecimal.valueOf(100));
 
         // Adjusts the time period and rate depending on the period display choice
-        if(period.equals("Q"))
+        switch (period)
         {
-            timeFrame *= 4;
-            r /= 4;
-        }
-        else if(period.equals("M"))
-        {
-            timeFrame *= 12;
-            r /= 12;
-        }
-        else if(period.equals("D"))
-        {
-            timeFrame *= 365;
-            r /= 365;
+            case "Q" ->
+            {
+                timeFrame *= 4;
+                r.divide(BigDecimal.valueOf(4));
+            }
+            case "M" ->
+            {
+                timeFrame *= 12;
+                r.divide(BigDecimal.valueOf(12));
+            }
+            case "D" ->
+            {
+                timeFrame *= 365;
+                r.divide(BigDecimal.valueOf(365));
+            }
         }
 
         // Loops for each time period section and displays the interest earned for that section
         for(int i = 1; i <= timeFrame; i++)
         {
-            earned = total * r;
-            double newTotal = total + earned;
+            earned = total.multiply(r);
+            BigDecimal newTotal = total.add(earned);
 
             switch (period)
             {
